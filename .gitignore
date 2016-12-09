@@ -1,3 +1,9 @@
+#tempfiles
+*~
+
+#Qt project local file
+*.pro.user
+
 # Compiled Object files
 *.slo
 *.lo
