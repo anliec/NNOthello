@@ -6,12 +6,14 @@
 #include "BasicAI.h"
 #include "RobionAI.h"
 
-#include <ipp.h>
 
 //#define TOURNAMENT
 
 int main(int argc, char *argv[])
 {
+#ifdef USE_INTEL_IPP
+    std::cout << "build using Intel IPP" << std::endl;
+#endif
 #ifndef TOURNAMENT
     QApplication a(argc, argv);
     MainWindow w;

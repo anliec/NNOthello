@@ -12,9 +12,6 @@ const unsigned BOARD_SIZE_Y = 8;
 const unsigned int NB_LAYERS = 3;
 const unsigned int LAYER_SIZES[NB_LAYERS] = {BOARD_SIZE_X*BOARD_SIZE_Y, 8, 1};
 
-//comment to disable Intel IPP function
-#define USE_INTEL_IPP
-
 class config
 {
 public:

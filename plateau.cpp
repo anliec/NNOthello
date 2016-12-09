@@ -2,9 +2,9 @@
 
 Plateau::Plateau()
 {
-    for(int x=0; x<BOARD_SIZE_X ; x++)
+    for(unsigned x=0; x<BOARD_SIZE_X ; x++)
     {
-        for(int y=0;y<BOARD_SIZE_Y;y++)
+        for(unsigned y=0;y<BOARD_SIZE_Y;y++)
         {
             table[x][y]=0;
         }
@@ -328,8 +328,8 @@ void Plateau::jouerGeton(int x, int y, int joueur)
 int Plateau::nbrJetonsJoueur(int numJoueur) const
 {
     int nbr=0;
-    for(int x=0 ; x<BOARD_SIZE_X ; x++){
-        for(int y=0 ; y<BOARD_SIZE_Y ; y++){
+    for(unsigned x=0 ; x<BOARD_SIZE_X ; x++){
+        for(unsigned y=0 ; y<BOARD_SIZE_Y ; y++){
             if(getCase(x,y) == numJoueur){
                 nbr++;
             }

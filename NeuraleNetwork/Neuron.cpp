@@ -99,9 +99,9 @@ double Neuron::Sigmoid(const double &x)
 #ifndef USE_INTEL_IPP
     return atan(x)*(2.0/PI); //to get negative number in [-1,1]
 #else
-    Ipp64f ret = static_cast<Ipp64f>(x);
+    Ipp64f ret = x;//static_cast<Ipp64f>(x);
     ippsArctan_64f_I( &ret, 1);
     ret*=(2.0/PI);
-    return static_cast<double>(ret);
+    return ret;
 #endif
 }

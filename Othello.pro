@@ -56,8 +56,19 @@ FORMS    += mainwindow.ui
 CONFIG += mobility
 MOBILITY = 
 
+#comment to disable Intel IPP
+CONFIG += IPP
 
-LIBS += -I/opt/intel/ipp/include -L/opt/intel/ipp/lib/intel64 -lippi -lipps -lippcore -lm -lpthread
+#to build using IPP
+IPP {
+    #add a define to use IPP function in NN sources
+    DEFINES += USE_INTEL_IPP
+    #add build path to IPP (using default IPP Linux path)
+    unix:!macx {
+        LIBS += -I/opt/intel/ipp/include -L/opt/intel/ipp/lib/intel64 -lippi -lipps -lippvm -lippcore -lm -lpthread
 
-INCLUDEPATH += /opt/intel/ipp/include
-DEPENDPATH += /opt/intel/ipp/include
+        INCLUDEPATH += /opt/intel/ipp/include
+        DEPENDPATH += /opt/intel/ipp/include
+    }
+    #TODO: add build option for other OSs
+}
