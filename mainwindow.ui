@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>596</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>571</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPreferences">
+    <property name="title">
+     <string>Préférences</string>
+    </property>
+    <widget class="QMenu" name="menuMode_de_jeux">
+     <property name="title">
+      <string>Mode de jeux</string>
+     </property>
+     <addaction name="actionModeDebug"/>
+     <addaction name="actionModeNormale"/>
+    </widget>
+    <widget class="QMenu" name="menuNiveau_IA">
+     <property name="title">
+      <string>Niveau IA</string>
+     </property>
+     <addaction name="actionIA_Debutant"/>
+     <addaction name="actionIA_Facile"/>
+     <addaction name="actionIA_Normal"/>
+    </widget>
+    <addaction name="menuMode_de_jeux"/>
+    <addaction name="menuNiveau_IA"/>
+   </widget>
+   <widget class="QMenu" name="menuJeux">
+    <property name="title">
+     <string>Jeux</string>
+    </property>
+    <addaction name="actionNouvelle_Partie"/>
+   </widget>
+   <addaction name="menuPreferences"/>
+   <addaction name="menuJeux"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionModeDebug">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Debug</string>
+   </property>
+  </action>
+  <action name="actionModeNormale">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Normale</string>
+   </property>
+  </action>
+  <action name="actionIA_Debutant">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Débutant</string>
+   </property>
+  </action>
+  <action name="actionIA_Facile">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Facile</string>
+   </property>
+  </action>
+  <action name="actionIA_Normal">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Normal</string>
+   </property>
+  </action>
+  <action name="actionNouvelle_Partie">
+   <property name="text">
+    <string>Nouvelle Partie</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
